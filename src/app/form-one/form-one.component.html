@@ -1,0 +1,124 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+<div class="main-container">
+  <div class="container">
+    <h2>Registration</h2>
+    <hr />
+    <div class="form-container">
+      <form [formGroup]="formOne">
+        <span class="details-personal">Personal Details</span>
+        <div class="form-child">
+          <label>Full Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            formControlName="fullName"
+          />
+          <p *ngIf="fullName && fullName.invalid && fullName.touched">
+            This field is mandatory
+          </p>
+        </div>
+        <div class="form-child">
+          <label>Date of Birth</label>
+          <input type="date" formControlName="dateOfBirth" />
+          <p *ngIf="dateOfBirth && dateOfBirth.touched && dateOfBirth.invalid">
+            This field is mandatory
+          </p>
+        </div>
+        <div class="form-child">
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            formControlName="email"
+          />
+          <p *ngIf="email && email.invalid && email.touched">
+            Please enter a valid email
+          </p>
+        </div>
+        <div class="form-child">
+          <label>Mobile Number</label>
+          <input
+            type="number"
+            placeholder="Enter mobile number"
+            formControlName="mobileNumber"
+          />
+          <p *ngIf="number && number.touched && number.invalid">
+            This field is mandatory
+          </p>
+        </div>
+        <div class="form-child">
+          <label>Gender</label>
+          <input
+            type="text"
+            placeholder="Enter your gender"
+            formControlName="gender"
+          />
+        </div>
+        <div class="form-child">
+          <label>Occupation</label>
+          <input
+            type="text"
+            placeholder="Enter your occupation"
+            formControlName="occupation"
+          />
+        </div>
+        <span class="details-identity">Identity Details</span>
+        <div class="form-child">
+          <label>ID Type</label>
+          <input
+            type="text"
+            placeholder="Enter ID type"
+            formControlName="idType"
+          />
+        </div>
+        <div class="form-child">
+          <label>ID Number</label>
+          <input
+            type="number"
+            placeholder="Enter ID number"
+            formControlName="idNumber"
+          />
+        </div>
+        <div class="form-child">
+          <label>Issue Authority</label>
+          <input
+            type="text"
+            placeholder="Enter issue department"
+            formControlName="issueAuthority"
+          />
+        </div>
+        <div class="form-child">
+          <label>Issued State</label>
+          <input
+            type="text"
+            placeholder="Enter issued state"
+            formControlName="issuedState"
+          />
+        </div>
+        <div class="form-child">
+          <label>Issued Date</label>
+          <input type="date" formControlName="issuedDate" />
+        </div>
+        <div class="form-child">
+          <label>Expiry Date</label>
+          <input type="date" formControlName="expiryDate" />
+        </div>
+      </form>
+      <button
+        [disabled]="formOne.invalid"
+        type="button"
+        (click)="onSubmit()"
+        routerLink="../form-two"
+      >
+        Next
+        <span class="material-symbols-outlined icon"> send </span>
+      </button>
+      <p class="button-p" *ngIf="formOne.invalid && formOne.touched">
+        Your form is invalid
+      </p>
+    </div>
+  </div>
+</div>

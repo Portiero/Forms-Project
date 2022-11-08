@@ -1,0 +1,20 @@
+img {
+  width: 250px;
+  height: 250px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  color: #1f79ff;
+}
+
+p {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

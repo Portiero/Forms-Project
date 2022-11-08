@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "forms-project-6cf66": {
+      "hosting": {
+        "forms": [
+          "forms-project-6cf66"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "forms-project-6cf66"
+  }
+}
