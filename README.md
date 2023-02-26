@@ -2,7 +2,7 @@
 
 ## Live link: https://portiero.github.io/Forms-Project/
 
-*Remark*: First four fields are mandatory!!!
+Remark: *First four fields are mandatory!!!*
 
 **Connected with FireStore Database**
 
